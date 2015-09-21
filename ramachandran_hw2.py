@@ -1,6 +1,5 @@
 import numpy as np
 from math import *
-
 """                 Part 1                
 
      Consider the recurrence relation xn = (1/3)**n             """
@@ -27,7 +26,9 @@ for n in range (0,21):
         print "The absolute error when x = 20 is ", absolute
         print "The relative error when x = 20 is ", relative
         
-#We can see that there is a large difference between the absolute errors when x=5 and x=20, but not a big difference between the relative errors of the two. 
+"""We can see that there is a large difference between the absolute
+ errors when x=5 and x=20, but not a big difference between the relative
+ errors of the two.""" 
 
         
 """                 Part 2                
@@ -56,7 +57,9 @@ for n in range (0,21):
         print "The absolute error when x = 20 is ", absolute
         print "The relative error when x = 20 is ", relative
 
-#This is a stable calculation because the values used are integer values rather than floats. The errors produced are 0, so this proves that the calculation is stable. 
+"""This is a stable calculation because the values used are integer
+ values rather than floats. The errors produced are 0, so this proves
+ that the calculation is stable.""" 
 
 """                 Part 3                
 
