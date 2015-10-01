@@ -1,0 +1,13 @@
+def trapRule (a,b,f):
+    total = 0.
+    h = (b-a)/2
+    for i in frange(a,b,0.01):
+        area =.01*(f(i+.01)+f(i))/2.0
+        """print(area)"""
+        total = total + area
+    return total
+
+def f(x):
+    return (x**3+(2*x**2)-4)
+
+print(trapRule(-1,1,f))
