@@ -1,3 +1,5 @@
+from math import exp
+import numpy as np
 
 # Derivative function
 
