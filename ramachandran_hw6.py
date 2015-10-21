@@ -1,14 +1,7 @@
-from datetime import datetime
-from datetime import timedelta
-from math import exp
-import numpy as np
-
 
 # Derivative function
-"""def f_prime(x,y):
-    h1 = x[i]-x[i-1]
-    h2 = x[i+1]-x[i]
-    return -(((h1/(h2*(h1+h2)))*(y[i+1])) - (((h1-h2)/(h2*h1))*(y[i])) - ((h2/(h1*(h1+h2)))*(y[i-1])))"""
+
+print("We need a f_prime function that only takes one variable. My original f_prime function took f_prime(x,y). This has been modified to only take the function that needs to be derived as a variable.")
 
 def f_prime(y):
     def derivative(x, h=.1e-5):
@@ -16,7 +9,9 @@ def f_prime(y):
     return derivative 
 
 
-#Black body function to test 
+#Black body function to test
+
+print
 
 def B(T):
     h = 6.626 * 10**(-27)
@@ -88,15 +83,26 @@ def y(x):
 print("-----------------------------------------------------------")
 
 print("This is to test the Newton function works")
-print ("The root for g(x) is", bisection (g, 1, 2, 30, 0.001))
+print ("The root for g(x) by bisection is", bisection (g, 1, 2, 30, 0.001))
 print("The root for g(x) by netwon is", Newton(6,g,f_prime(g)))
-print ("The root for y(x) is", bisection (y, 0, 5, 30, 0.001))
+print ("The root for y(x) bisection is", bisection (y, 0, 5, 30, 0.001))
 print("The root for y(x) by netwon is", Newton(6,y,f_prime(y)))
 
 print("-----------------------------------------------------------")
 
-print ("The root for B(T) is", bisection (B,10, 80, 100, 1*10**(-15)))
+print ("The root for B(T) by bisection is", bisection (B,10, 80, 100, 1*10**(-15)))
 print("The root for B(T) by netwon is", Newton(80,B,f_prime(B)))
+
+print("-----------------------------------------------------------")
+
+
+if __name__ == "__main__":
+    import timeit
+    setup = "from __main__ import Newton, B, bisection,f_prime"
+    print timeit.timeit("Newton(80,B,f_prime(B))", setup=setup)
+    print timeit.timeit("bisection (B,10, 80, 100, 1*10**(-15))", setup=setup)
+
+    print ("As we can see, the Newton function runs faster than the bisection function")
 
 
         
