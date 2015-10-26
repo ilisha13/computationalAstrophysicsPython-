@@ -1,3 +1,6 @@
+
+"""Create an intergration function and apply it to the angular diameter distance in cosmology"""
+
 import numpy as np
 import math 
 from matplotlib.pyplot import *
