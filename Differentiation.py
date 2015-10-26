@@ -1,4 +1,7 @@
 
+""" Using a given model of data, write a code to convert the absolute model number to differential counts, and 
+plot the observed data against the model. """
+
 from matplotlib.pyplot import *
 import numpy as np 
 from math import *
