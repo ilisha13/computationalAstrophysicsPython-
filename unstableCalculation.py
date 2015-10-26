@@ -1,3 +1,8 @@
+""" Implement the recurrence relation for various functions. Calculate the relative and absolute
+     errors for each calculation. Based on these errors, determine whether the calculation is stable or not. """
+
+
+
 import numpy as np
 from math import *
 """                 Part 1                
