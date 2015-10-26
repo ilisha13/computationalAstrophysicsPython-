@@ -1,3 +1,6 @@
+
+"""Intergration using peicewise linear method, trapezoidal intergrator, and Simpson's rule"""
+
 import numpy as np
 import math as math 
 
